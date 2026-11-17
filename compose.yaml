@@ -1,0 +1,11 @@
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-react-app
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+    restart: unless-stopped
